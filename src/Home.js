@@ -10,9 +10,9 @@ import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-import adam from "./assets/adam.png";
-import adambybarn from "./assets/adambybarn.jpg";
-import techstack from "./assets/techstack.JPG";
+import adam from "./assets/adamwhitebackground.JPG";
+import adambybarn from "./assets/adambybarncopy.jpg";
+import techstack from "./assets/techcopy.JPG";
 
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -247,7 +247,7 @@ export class Home extends React.Component {
                         <br /><br />
                         <Button className="contact-button" href="content">Source Code</Button>
                     </p>
-                    <img src={techstack} alt="Adam Qian" className="adam-by-barn" data-aos="fade-left" data-aos-duration="4000" data-aos-mirror="true" data-aos-anchor-placement="bottom-bottom"/>
+                    <img src={techstack} alt="Tech Stack" className="adam-by-barn" data-aos="fade-left" data-aos-duration="4000" data-aos-mirror="true" data-aos-anchor-placement="bottom-bottom"/>
                     
                 </div>
             </div>
