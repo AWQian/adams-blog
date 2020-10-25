@@ -10,7 +10,7 @@ import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-import adam from "./assets/adamwhitebackground.JPG";
+import adam from "./assets/adam.png";
 import adambybarn from "./assets/adambybarn.jpg";
 import techstack from "./assets/techstack.JPG";
 
@@ -31,7 +31,7 @@ const MainStyle = styled.div`
     }
     .adam {
         display: block;
-        max-width: 100%;
+        height: 800px;
         margin-right: 30%;
     }
     .adam-overlay {
