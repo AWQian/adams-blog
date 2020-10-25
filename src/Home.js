@@ -10,7 +10,7 @@ import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-import adam from "./assets/adamwhitebackground.JPG";
+import adam from "./assets/adam.png";
 import adambybarn from "./assets/adambybarncopy.jpg";
 import techstack from "./assets/techcopy.JPG";
 
@@ -31,13 +31,15 @@ const MainStyle = styled.div`
     }
     .adam {
         display: block;
-        height: 800px;
         margin-right: 30%;
+        max-height: 800px;
+        max-width: 100%;
     }
     .adam-overlay {
         display: flex;
         justify-content: center;
         border-bottom: 2px solid maroon;
+        max-width: 100%;
 
         @media only screen and (max-width: 1100px) {
             flex-wrap: wrap;
@@ -46,8 +48,9 @@ const MainStyle = styled.div`
     }
     .adam-label {
         position: absolute;
-        top: max(50%, 400px);
+        top: max(50%, 300px);
         bottom: max(auto, 500px);
+        max-width: 100%;
         
         @media only screen and (max-width: 1100px) {
             display: block;
@@ -73,7 +76,9 @@ const MainStyle = styled.div`
     /*ABOUT ME*/
 
     .adam-by-barn {
-        width: max(25%, 400px);
+        max-width: 100%;
+        max-height: 800px;
+        /* max-width: 100%; */
     }
 
     .about-me-text {
@@ -112,9 +117,11 @@ const MainStyle = styled.div`
     /*FOOTER*/
 
     .footer-wrapper {
+        /* display: none; */
         text-align: center;
         border-top: 2px solid maroon;
         background-color: maroon;
+
     }
 
     .icons-wrapper {
@@ -122,6 +129,10 @@ const MainStyle = styled.div`
         flex-direction: row;
         justify-content: center;
         flex-grow: 0;
+
+        @media only screen and (max-width: 500px) {
+            flex-wrap: wrap;
+        }
     }
 `
 
@@ -162,9 +173,9 @@ export class Home extends React.Component {
             <div style={{"textAlign":"center", "marginTop":"50px", "marginBottom":"50px"}}>
                 <h1 style={{"fontSize":"50px", }}>About Me</h1>
                 <div className="about-me-wrapper"  >
-                    <img src={adambybarn} alt="Adam Qian" className="adam-by-barn" data-aos="fade-right" data-aos-duration="4000" data-aos-mirror="true" 
+                    <img src={adambybarn} alt="Adam Qian" className="adam-by-barn" data-aos="fade-up" data-aos-duration="4000" data-aos-mirror="true" 
                     data-aos-anchor-placement="bottom-bottom"/>
-                    <p className="about-me-text" data-aos="fade-left" data-aos-duration="4000" data-aos-mirror="true" data-aos-anchor-placement="bottom-bottom">
+                    <p className="about-me-text" data-aos="fade-up" data-aos-duration="4000" data-aos-mirror="true" data-aos-anchor-placement="bottom-bottom">
                         I'm a commerce student currently studying at the Smith School of Business at Queen's University.
                         <br /><br />
                         <strong>I'm passionate about finance, accounting, data analytics, and programming. </strong>
@@ -234,7 +245,7 @@ export class Home extends React.Component {
             <div style={{"textAlign":"center", "marginTop":"50px", "marginBottom":"50px"}}>
                 <h1 style={{"fontSize":"50px", }}>About This Website</h1>
                 <div className="about-me-wrapper"  >
-                    <p className="about-me-text" data-aos="fade-right" data-aos-duration="4000" data-aos-mirror="true" data-aos-anchor-placement="bottom-bottom">
+                    <p className="about-me-text" data-aos="fade-up" data-aos-duration="4000" data-aos-mirror="true" data-aos-anchor-placement="bottom-bottom">
                         <strong>This website is mainly intended to be a short, interactive version of my resume.</strong> It's also a testing ground for 
                         my web-development ideas and my first blog.
                         <br /><br />
@@ -247,7 +258,7 @@ export class Home extends React.Component {
                         <br /><br />
                         <Button className="contact-button" href="content">Source Code</Button>
                     </p>
-                    <img src={techstack} alt="Tech Stack" className="adam-by-barn" data-aos="fade-left" data-aos-duration="4000" data-aos-mirror="true" data-aos-anchor-placement="bottom-bottom"/>
+                    <img src={techstack} alt="Tech Stack" className="adam-by-barn" data-aos="fade-up" data-aos-duration="4000" data-aos-mirror="true" data-aos-anchor-placement="bottom-bottom"/>
                     
                 </div>
             </div>
