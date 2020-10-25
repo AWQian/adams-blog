@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import axios from "axios";
+import { Navigation } from "./Navigation";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import { Home } from "./Home";
+import { Content } from "./Content";
+import { Contact } from "./Contact";
+
+export class App extends React.Component {
+    componentDidMount() {
+        axios.get("/users").then(res => {
+            console.log("Server Status: " + res.status);
+        })
+    }
+
+    render() {
+        return(
+            <React.Fragment>
+                <Navigation />
+                <Router>
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/content" component={Content} />
+                        <Route exact path="/contact" component={Contact} />
+                    </Switch>
+                </Router>
+            </React.Fragment>
+        );
+    }
 }
-
-export default App;
